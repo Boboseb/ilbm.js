@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Test ILBM</title>
+</head>
+<body>
+  ...
+  <img src="Sword2.iff">
+  <!--img src="aileo.iff.info"-->
+  ...
+  <script type="text/javascript" src="jquery-2.0.0.min.js"></script>
+  <script type="text/javascript" src="ilbm.js"></script>
+  <script type="text/javascript">
+
+  document.addEventListener( "DOMContentLoaded", function () {
+    var list = document.getElementsByTagName("img");
+    
+    for (var i = 0; i < list.length; ++i) {
+      if (list[i].getAttribute("src")) {
+        var ilbm = new Ilbm(list[i]);
+        ilbm.load();
+      }
+    }
+  }, false );
+
+  </script>
+</body>
+</html>
